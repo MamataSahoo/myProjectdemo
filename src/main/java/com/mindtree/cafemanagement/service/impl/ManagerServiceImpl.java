@@ -20,7 +20,7 @@ public class ManagerServiceImpl implements ManagerService {
 	public ManagerDto insertManager(ManagerDto managerdto) {
 		Manager manager = convertDtoToEntity(managerdto);
 		Manager manager1 = managerRepo.save(manager);
-		ManagerDto manager2 = convertEntityToDto(manager1);
+		ManagerDto manager2 = modelMapper.map(manager1, ManagerDto.class);;
 		return manager2;
 	}
 
