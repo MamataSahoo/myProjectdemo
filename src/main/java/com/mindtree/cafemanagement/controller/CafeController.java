@@ -62,6 +62,7 @@ public class CafeController {
 
 	@GetMapping("/getcafebymanager/{id}")
 	public List<CafeDto> getCafeByManagerId(@PathVariable("id") int id) {
-		return cafeService.getCafeByManagerId(id);
+		List<CafeDto> cafedato1=cafeService.getCafeByManagerId(id);
+		return cafedato1;
 	}
 }
