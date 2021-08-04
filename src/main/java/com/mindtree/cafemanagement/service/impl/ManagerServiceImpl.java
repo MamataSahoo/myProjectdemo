@@ -18,9 +18,9 @@ public class ManagerServiceImpl implements ManagerService {
 
 	@Override
 	public ManagerDto insertManager(ManagerDto managerdto) {
-		Manager managerD1 = convertDtoToEntity(managerdto);
-		Manager managerD2 = managerRepo.save(managerD1);
-		ManagerDto manager2 = modelMapper.map(managerD2, ManagerDto.class);;
+		Manager managerDetails1 = convertDtoToEntity(managerdto);
+		Manager managerDetails2 = managerRepo.save(managerDetails1);
+		ManagerDto manager2 = modelMapper.map(managerDetails2, ManagerDto.class);;
 		return manager2;
 	}
 
