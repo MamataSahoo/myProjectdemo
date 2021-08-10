@@ -101,8 +101,8 @@ public class CafeServiceImpl implements CafeService {
 	public List<CafeDto> getCafeByManagerId(int id) {
 		List<Cafe> cafeDetailsList = cafeRepo.getCafeByManager(id);
 		List<CafeDto> cafeDtoDetailsList = new ArrayList<CafeDto>();
-		for (Cafe i : cafeList) {
-			cafeDtoList.add(convertEntityToDto(i));
+		for (Cafe i : cafeDetailsList) {
+			cafeDtoDetailsList.add(convertEntityToDto(i));
 		}
 		return cafeDtoList;
 	}
