@@ -99,12 +99,12 @@ public class CafeServiceImpl implements CafeService {
 
 	@Override
 	public List<CafeDto> getCafeByManagerId(int id) {
-		List<Cafe> cafeList = cafeRepo.getCafeByManager(id);
-		List<CafeDto> cafeDtoList = new ArrayList<CafeDto>();
-		for (Cafe i : cafeList) {
-			cafeDtoList.add(convertEntityToDto(i));
+		List<Cafe> cafeLists = cafeRepo.getCafeByManager(id);
+		List<CafeDto> cafeDtoLists = new ArrayList<CafeDto>();
+		for (Cafe i : cafeLists) {
+			cafeDtoLists.add(convertEntityToDto(i));
 		}
-		return cafeDtoList;
+		return cafeDtoLists;
 	}
 
 }
